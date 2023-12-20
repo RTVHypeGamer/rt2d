@@ -4,6 +4,7 @@ project (rt2d)
 
 # delete CMakeCache.txt from the build directory when you edit these options
 ####################################################################
+OPTION(MAKE_PixelColor "Make RT2D pixelcolor application" ON)
 OPTION(MAKE_START "Make RT2D start application" ON)
 OPTION(MAKE_DEMO "Make RT2D demo (tests) application" ON)
 OPTION(MAKE_CANVAS_DEMO "Make RT2D Canvas demo (tests) application" ON)
@@ -573,4 +574,18 @@ IF(MAKE_BOX2DSTART AND USE_BOX2D)
 	)
 ENDIF()
 
+IF(MAKE_PixelColor)
+	add_executable(PixelColor
+		PixelColor/main.cpp
+		PixelColor/pixelcolorscene.cpp
+		PixelColor/pixelcolorscene.h
+		PixelColor/gridentity.cpp
+		PixelColor/gridentity.h
+		PixelColor/superscene.cpp
+		PixelColor/superscene.h
+	)
+	target_link_libraries(PixelColor
+		${ALL_GRAPHICS_LIBS}
+	)
+ENDIF()
 ####################################################################
