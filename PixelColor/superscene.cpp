@@ -81,16 +81,16 @@ void SuperScene::Camera(float deltaTime)
 
 	Vector2 direction = Vector2(0,0);
 
-	if (input()->getKey(KeyCode::Up)) {
+	if (input()->getKey(KeyCode::W)) {
 		direction -= up;
 	}
-	if (input()->getKey(KeyCode::Down)) {
+	if (input()->getKey(KeyCode::S)) {
 		direction += up;
 	}
-	if (input()->getKey(KeyCode::Right)) {
+	if (input()->getKey(KeyCode::D)) {
 		direction += right;
 	}
-	if (input()->getKey(KeyCode::Left)) {
+	if (input()->getKey(KeyCode::A)) {
 		direction -= right;
 	}
 	direction.normalize();

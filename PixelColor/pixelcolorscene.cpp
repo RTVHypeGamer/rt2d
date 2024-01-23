@@ -2,13 +2,14 @@
 
 PixelColorScene::PixelColorScene() : SuperScene()
 {
-	gridwidth = 32;
-	gridheight = 32;
+	text[0]->message("Move the camera with W, A, S, D");
+	gridwidth = 512;
+	gridheight = 256;
 	cellwidth = 64;
 	cellheight = 64;
 
 	grid = new GridEntity();
-	grid->addGrid("assets/pixelcolor.tga", 8, 8, gridwidth, gridheight, cellwidth, cellheight);
+	grid->addGrid("assets/pixelcoloer.tga", 8,8, gridwidth, gridheight, cellwidth, cellheight);
 
 	layers[0]->addChild(grid);
 
