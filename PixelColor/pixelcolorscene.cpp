@@ -9,7 +9,7 @@ PixelColorScene::PixelColorScene() : SuperScene()
 	cellheight = 64;
 
 	grid = new GridEntity();
-	grid->addGrid("assetss/pixelcoloer.tga", 8, 8, gridwidth, gridheight, cellwidth, cellheight);
+	grid->addGrid("assets/pixelcoloer.tga", 8, 8, gridwidth, gridheight, cellwidth, cellheight);
 
 	layers[0]->addChild(grid);
 
