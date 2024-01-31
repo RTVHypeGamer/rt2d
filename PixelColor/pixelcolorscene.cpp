@@ -2,7 +2,7 @@
 
 PixelColorScene::PixelColorScene() : SuperScene()
 {
-	text[0]->message("Move the camera with W, A, S, D");
+	text[0]->message("Move the camera with W, A, S, D", BLUE);
 	gridwidth = 64;
 	gridheight = 64;
 	cellwidth = 64;
